@@ -16,7 +16,7 @@ public class TrainingService {
     private final TrainingRepo trainingRepo;
 
     public Training findById(Long id) {
-        return trainingRepo.findById(id).orElseThrow(() -> new MyNoContentException("По вашему запросу тренировочный план не найдено"));
+        return trainingRepo.findById(id).orElseThrow(() -> new MyNoContentException("По вашему запросу тренировочный план не найден"));
     }
 
     public List<Training> findAll() {
